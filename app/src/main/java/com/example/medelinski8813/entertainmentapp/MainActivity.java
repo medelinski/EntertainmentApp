@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //Link to homepage
              break;
             case R.id.btnRegister:
-                //Link to register
+                Intent registerIntent = new Intent(MainActivity.this, Register.class);
+                MainActivity.this.startActivity(registerIntent);
                 break;
 
 
