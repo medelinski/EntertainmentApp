@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button btnLogin;
     private Button btnRegister;
+    private Button btnGoHome;
     private EditText etUsername;
     private EditText etPassword;
 
@@ -23,9 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnRegister = (Button) findViewById(R.id.btnRegister);
+        btnGoHome = (Button) findViewById(R.id.btnGoHome);
 
         btnLogin.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
+        btnGoHome.setOnClickListener(this);
 
 
 
@@ -35,11 +38,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnLogin:
-                //Link to homepage
+//                Intent homepageIntent = new Intent(MainActivity.this, Homepage.class);
+//                MainActivity.this.startActivity(homepageIntent);
              break;
             case R.id.btnRegister:
                 Intent registerIntent = new Intent(MainActivity.this, Register.class);
                 MainActivity.this.startActivity(registerIntent);
+                break;
+            case R.id.btnGoHome:
+                Intent homepageIntent = new Intent(MainActivity.this, Homepage.class);
+                MainActivity.this.startActivity(homepageIntent);
                 break;
 
 
